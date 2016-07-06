@@ -76,6 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
   Rails.application.routes.default_url_options[:host] = 'superpractice.herokuapp.com'
   config.action_mailer.default_url_options = { :host => 'superpractice.herokuapp.com' }
 
@@ -93,6 +94,7 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
+
   config.paperclip_defaults = {
   storage: :s3,
   s3_host_name: 's3-us-west-1.amazonaws.com',
