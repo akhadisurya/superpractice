@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @site.title %>
+</p>
+
+<p>
+  <strong>Meta image:</strong>
+  <%= @site.meta_image %>
+</p>
+
+<p>
+  <strong>Meta description:</strong>
+  <%= @site.meta_description %>
+</p>
+
+<p>
+  <strong>Meta url:</strong>
+  <%= @site.meta_url %>
+</p>
+
+<p>
+  <strong>Google site verifcation:</strong>
+  <%= @site.google_site_verifcation %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @site.about %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @site.organization_id %>
+</p>
+
+<%= link_to 'Edit', edit_site_path(@site) %> |
+<%= link_to 'Back', sites_path %>

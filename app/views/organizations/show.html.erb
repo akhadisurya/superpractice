@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @organization.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @organization.description %>
+</p>
+
+<p>
+  <strong>One liner:</strong>
+  <%= @organization.one_liner %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @organization.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @organization.phone %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @organization.email_address %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @organization.twitter %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @organization.facebook %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @organization.linkedin %>
+</p>
+
+<p>
+  <strong>Angelist:</strong>
+  <%= @organization.angelist %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @organization.instagram %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @organization.github %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @organization.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_organization_path(@organization) %> |
+<%= link_to 'Back', organizations_path %>
