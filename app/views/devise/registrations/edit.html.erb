@@ -8,6 +8,10 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <div>
+    Add Your <%= f.label :avatar %>:
+    <%= f.file_field :avatar %>
+  </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
@@ -34,6 +38,7 @@
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
 
 <h3>Cancel my account</h3>
