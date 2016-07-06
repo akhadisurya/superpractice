@@ -76,8 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  Rails.application.routes.default_url_options[:host] = 'practice.herokuapp.com'
-  config.action_mailer.default_url_options = { :host => 'practice.herokuapp.com' }
+  Rails.application.routes.default_url_options[:host] = 'superpractice.herokuapp.com'
+  config.action_mailer.default_url_options = { :host => 'superpractice.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
@@ -93,14 +93,14 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
   }
-
   config.paperclip_defaults = {
   storage: :s3,
+  s3_host_name: 's3-us-west-1.amazonaws.com',
   s3_credentials: {
-    bucket: ENV.fetch('S3_BUCKET_NAME'),
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
+    bucket: ENV['S3_BUCKET_NAME'],
+    access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+    s3_region: ENV['AWS_REGION'],
   }
 }
 end
